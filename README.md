@@ -33,7 +33,7 @@ This project implements an end-to-end speech recognition system for Arabic, spec
 - Architecture:
    <img src="https://i.sstatic.net/984pp.png" alt="Some Content">
   - Embedding layer
-  - # LSTM layer (128 units)
+  - ## LSTM layer (128 units)
     <img src="https://www.baeldung.com/wp-content/ql-cache/quicklatex.com-a79d43c09bb28f999cf3ea38279366de_l3.svg" alt="Some Content">
     <img src="https://www.baeldung.com/wp-content/uploads/sites/4/2022/01/bilstm-1-1024x384.png" alt="Some Content">
   - TimeDistributed Dense layer with softmax activation
@@ -47,7 +47,7 @@ This project implements an end-to-end speech recognition system for Arabic, spec
 ## Training Process
 
 - Custom data generator with on-the-fly augmentation (time stretching and noise addition)
-- # Transition to Conformer-CTC loss optimization
+- ## Transition to Conformer-CTC loss optimization
   Connectionist Temporal Classification (CTC) is a way to get around not knowing the alignment between the input and the output.
    CTC works by summing over the probability of all possible alignments between the two. We need to understand what these alignments are 
    in order to understand how the loss function is ultimately calculated.
