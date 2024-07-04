@@ -31,9 +31,9 @@ This project implements an end-to-end speech recognition system for Arabic, spec
 ### Language Model
 - Input: Character sequences
 - Architecture:
-   <img src="[https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_92x30dp.png](https://i.sstatic.net/984pp.png)" alt="Some Content">
+   <img src="https://i.sstatic.net/984pp.png" alt="Some Content">
   - Embedding layer
-  - #LSTM layer (128 units)
+  - # LSTM layer (128 units)
     <img src="https://www.baeldung.com/wp-content/ql-cache/quicklatex.com-a79d43c09bb28f999cf3ea38279366de_l3.svg" alt="Some Content">
     <img src="https://www.baeldung.com/wp-content/uploads/sites/4/2022/01/bilstm-1-1024x384.png" alt="Some Content">
   - TimeDistributed Dense layer with softmax activation
@@ -47,7 +47,7 @@ This project implements an end-to-end speech recognition system for Arabic, spec
 ## Training Process
 
 - Custom data generator with on-the-fly augmentation (time stretching and noise addition)
-- #Transition to Conformer-CTC loss optimization
+- # Transition to Conformer-CTC loss optimization
   Connectionist Temporal Classification (CTC) is a way to get around not knowing the alignment between the input and the output.
    CTC works by summing over the probability of all possible alignments between the two. We need to understand what these alignments are 
    in order to understand how the loss function is ultimately calculated.
@@ -76,7 +76,11 @@ This project implements an end-to-end speech recognition system for Arabic, spec
 - Pandas
 - JiWER (for WER calculation)
 - Tqdm
-
+## Challenges faced during training:
+ The large size of the data required to train the model, so we ran the model twice because it requires a large GPU and more than 10 
+ continuous hours, and converting the outputs from the test data into words. We worked on this by extracting the distinctive words from 
+ the transcption and putting them in words.txt for the text. We also worked on identifying letters in the Arabic language and improving 
+ the outputs of the model and training it
 ## Future Improvements
 
 - Experiment with more advanced model architectures (e.g., Transformer-based models)
