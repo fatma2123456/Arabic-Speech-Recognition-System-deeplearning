@@ -48,8 +48,7 @@ This project implements an end-to-end speech recognition system for Arabic, spec
   Connectionist Temporal Classification (CTC) is a way to get around not knowing the alignment between the input and the output.
    CTC works by summing over the probability of all possible alignments between the two. We need to understand what these alignments are 
    in order to understand how the loss function is ultimately calculated.
-   ![alt text]([/image.jpg](https://distill.pub/2017/ctc/assets/ctc_cost.svg)?raw=true)
-- Early stopping and learning rate reduction strategies
+<img src="https://distill.pub/2017/ctc/assets/ctc_cost.svg" alt="Some Content">- Early stopping and learning rate reduction strategies
 
 ## Inference
 
